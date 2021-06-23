@@ -71,7 +71,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="448"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8dX-rG-Wak">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoffeeNameTableViewCell" id="8dX-rG-Wak">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8dX-rG-Wak" id="bzW-mf-NhL">
@@ -80,17 +80,11 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="kTF-IC-Bj1" id="gNu-sF-5Fv"/>
+                                    <outlet property="delegate" destination="kTF-IC-Bj1" id="8Q3-WY-iZV"/>
+                                </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="E5T-qv-hKS">
-                                <rect key="frame" x="104" y="559" width="206" height="32"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" systemColor="systemGreenColor"/>
-                            </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lq0-tI-o78">
                                 <rect key="frame" x="107" y="664" width="200" height="40"/>
                                 <constraints>
@@ -113,21 +107,22 @@
                         <viewLayoutGuide key="safeArea" id="XLM-JD-ave"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XLM-JD-ave" firstAttribute="bottom" secondItem="COy-rf-3di" secondAttribute="bottom" constant="110" id="4sy-Ua-0mP"/>
                             <constraint firstItem="COy-rf-3di" firstAttribute="top" secondItem="Lq0-tI-o78" secondAttribute="bottom" constant="8" symbolic="YES" id="54V-iX-rA4"/>
                             <constraint firstItem="Lq0-tI-o78" firstAttribute="centerX" secondItem="fbc-Lr-l8O" secondAttribute="centerX" id="AmL-BA-VB6"/>
-                            <constraint firstItem="Lq0-tI-o78" firstAttribute="top" secondItem="E5T-qv-hKS" secondAttribute="bottom" constant="74" id="Rk4-Uo-PAw"/>
                             <constraint firstItem="DcH-L3-ZcZ" firstAttribute="height" secondItem="fbc-Lr-l8O" secondAttribute="height" multiplier="0.5" id="WWo-Rm-GSx"/>
                             <constraint firstItem="COy-rf-3di" firstAttribute="centerX" secondItem="fbc-Lr-l8O" secondAttribute="centerX" id="Wfo-TH-a2W"/>
                             <constraint firstItem="DcH-L3-ZcZ" firstAttribute="width" secondItem="fbc-Lr-l8O" secondAttribute="width" id="aeH-1p-U7f"/>
                             <constraint firstItem="DcH-L3-ZcZ" firstAttribute="leading" secondItem="XLM-JD-ave" secondAttribute="leading" id="cZE-Pe-SbQ"/>
-                            <constraint firstItem="E5T-qv-hKS" firstAttribute="centerX" secondItem="fbc-Lr-l8O" secondAttribute="centerX" id="gTG-RG-mQe"/>
                             <constraint firstItem="DcH-L3-ZcZ" firstAttribute="top" secondItem="XLM-JD-ave" secondAttribute="top" id="oYp-UZ-HDe"/>
-                            <constraint firstItem="E5T-qv-hKS" firstAttribute="top" secondItem="DcH-L3-ZcZ" secondAttribute="bottom" constant="23" id="qFR-1R-sym"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Order" id="NqT-JM-ySj">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="pG2-Rx-puO"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="DcH-L3-ZcZ" id="ttL-hV-rly"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oww-MN-8PY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,12 +151,6 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

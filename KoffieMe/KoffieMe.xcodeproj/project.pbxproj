@@ -17,6 +17,7 @@
 		464D54DA268399C000E62136 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D54D9268399C000E62136 /* WebService.swift */; };
 		464D54DF26839E0C00E62136 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D54DE26839E0C00E62136 /* Order.swift */; };
 		464D54E42683A32900E62136 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D54E32683A32900E62136 /* OrderViewModel.swift */; };
+		464D54E72683B38D00E62136 /* AddCoffeeOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D54E62683B38D00E62136 /* AddCoffeeOrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		464D54D9268399C000E62136 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		464D54DE26839E0C00E62136 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		464D54E32683A32900E62136 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		464D54E62683B38D00E62136 /* AddCoffeeOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeOrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				464D54E32683A32900E62136 /* OrderViewModel.swift */,
+				464D54E62683B38D00E62136 /* AddCoffeeOrderViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				464D54DF26839E0C00E62136 /* Order.swift in Sources */,
+				464D54E72683B38D00E62136 /* AddCoffeeOrderViewModel.swift in Sources */,
 				464D54BB2683919900E62136 /* AppDelegate.swift in Sources */,
 				464D54BD2683919900E62136 /* SceneDelegate.swift in Sources */,
 				464D54D3268393C000E62136 /* OrdersTableViewController.swift in Sources */,
